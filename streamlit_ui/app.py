@@ -3,11 +3,12 @@ import requests
 
 st.title("AI Science Papers Assitant for arxiv.org")
 
-symptom_input = st.text_area("Share your Science Topic")
+symptom_input_val = st.text_area("Share your Science Topic")
+enclosed_input = f'"{symptom_input_val}"'
 
 if st.button("Get Analysis"):
     state_input = {
-                "input" : symptom_input,
+                "input" : enclosed_input,
                 "field_area" : "",
                 "summary" : ""
     }
